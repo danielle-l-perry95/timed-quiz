@@ -21,6 +21,7 @@ header {
     border-radius: 10px;
     
 }
+
 /* styling for hovering over the startbtn and answers */
 button:hover {
     color: darkviolet;

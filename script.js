@@ -9,3 +9,15 @@ startBtn.addEventListener("click",function() {
         questionContainer.style.display = "none"
     }
 })
+// set the timer to start on startbtn click. Needs fixing 
+document.getElementById("start-btn").addEventListener("click",function() {
+    var timeRemaining = 30
+    setInterval(function(){
+        document.getElementById("timer-seconds").textContent = timeRemaining--
+        if (timeRemaining <= 0) {
+            clearInterval(timeRemaining)
+            alert(`Quiz Failed! You ran out of time.`)
+        }
+    },1000)
+},)
+

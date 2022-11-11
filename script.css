@@ -42,13 +42,14 @@ button:hover {
     left: 1%;
 }
 
-.question-container {
+#question-container {
     border-style: solid;
     border-color: white;
     border-radius: 10px;
     text-align: center;
     display: list-item;
     padding-bottom: 25px;
+    display:block;
 }
 
 #btn-one,#btn-two,#btn-three,#btn-four {

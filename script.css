@@ -15,7 +15,7 @@ header {
 #start-btn {
     transform:translate(700px);
     background-color: white;
-    border:none;
+    border: none;
     font-size: 25px;
     padding: 5px;
     border-radius: 10px;
@@ -50,7 +50,7 @@ button:hover {
     text-align: center;
     display: list-item;
     padding-bottom: 25px;
-    display:block;
+    display:none;
 }
 /* button styling for multiple choice answers */
 #btn-one,#btn-two,#btn-three,#btn-four {

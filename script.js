@@ -10,16 +10,16 @@ startBtn.addEventListener("click",function() {
     }
 })
 // set the timer to start on startbtn click. How to fix stopping the alert and going back to main page when OK is clicked. 
-document.getElementById("start-btn").addEventListener("click",function() {
-    var timeRemaining = 30
-    setInterval(function(){
-        document.getElementById("timer-seconds").innerHTML = timeRemaining-- + " seconds"
-        if (timeRemaining <= 0) {
-            clearInterval(timeRemaining)
-            alert(`Quiz Failed! You ran out of time.`)
-        }
-    }, 1000)
-},)
+// document.getElementById("start-btn").addEventListener("click",function() {
+//     var timeRemaining = 30
+//     setInterval(function(){
+//         document.getElementById("timer-seconds").innerHTML = timeRemaining-- + " seconds"
+//         if (timeRemaining <= 0) {
+//             clearInterval(timeRemaining)
+//             alert(`Quiz Failed! You ran out of time.`)
+//         }
+//     }, 1000)
+// },)
 
 // create objects for the questions 
 var questions = [
@@ -48,3 +48,4 @@ var questions = [
         choices: ["a, b, and c","let, const, and var","x, y, and z", "dependent and independent"]
     }
 ]
+

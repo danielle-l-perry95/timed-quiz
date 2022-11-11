@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(130, 77, 149);
+    background-color: rgb(184, 147, 198);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -9,4 +9,20 @@ header {
     border-style: dashed;
     border-width: 5px;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+#start-btn {
+    transform:translate(700px);
+    background-color: white;
+    border:none;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+
+button:hover {
+    color: darkviolet;
+    cursor: pointer;
 }

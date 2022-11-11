@@ -11,7 +11,7 @@ header {
     text-align: center;
     margin-bottom: 10px;
 }
-
+/* start btn styling */
 #start-btn {
     transform:translate(700px);
     background-color: white;
@@ -21,7 +21,7 @@ header {
     border-radius: 10px;
     
 }
-
+/* styling for hovering over the startbtn and answers */
 button:hover {
     color: darkviolet;
     cursor: pointer;
@@ -51,7 +51,7 @@ button:hover {
     padding-bottom: 25px;
     display:block;
 }
-
+/* button styling for multiple choice answers */
 #btn-one,#btn-two,#btn-three,#btn-four {
     border-color: white;
     border-radius: 10px;

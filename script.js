@@ -21,3 +21,30 @@ document.getElementById("start-btn").addEventListener("click",function() {
     }, 1000)
 },)
 
+// create objects for the questions 
+var questions = [
+    { 
+        title:"Question One",
+        question: "What does JSON stand for?",
+        answer: "Javascript object notation",
+        choices: [ "Javascript operating numbers","Javascript object notation","Javascript object numberator","Javascript open navigation"]
+    },
+    {
+        title: "Question Two",
+        question: "What is a variable?",
+        answer: "containers for storing data",
+        choices: ["containers for storing data","independent and dependent","a function","a for loop"]
+    },
+    {
+        title: "Question Three",
+        question: "An array is surrounded by what?",
+        answer: `[]`,
+        choices: [`{}`,`()`,`[]`,`""`]
+    },
+    {
+        title: "Question Four",
+        question: "What are three ways to declare a variable?",
+        answer: "let, const, and var",
+        choices: ["a, b, and c","let, const, and var","x, y, and z", "dependent and independent"]
+    }
+]

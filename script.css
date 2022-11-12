@@ -116,3 +116,11 @@ button:hover {
     height: 75px;
     /* display: none; */
 }
+
+#saved-score, #saved-initials {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:white;
+    position: relative;
+    left: 45%
+}

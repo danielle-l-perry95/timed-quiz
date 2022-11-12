@@ -90,3 +90,38 @@ function incorrect() {
 function correct() {
     document.getElementById("score-number").innerHTML = results ++
 }
+// Saving the initials and score.This also does not work. 
+var scoreNumber = document.getElementById("score-number")
+var initials =  document.getElementById("initials")
+var saveBtn = document.getElementById("save")
+var savedScore = document.getElementById("saved-score")
+var savedInitials = document.getElementById("saved-initials")
+
+function createSave() {
+ var userData = {
+    score: score.value,
+    initials: initials.value
+};
+localStorage.setItem("userData",JSON.stringify(userData))
+renderMessage();
+};
+function renderMessage() {
+    var previousUserData = JSON.parse(localStorage.getItem("userData"));
+    if (previousUserData !== null) {
+        document.getElementById("saved-score").innerHTML = previousUserData.score
+        document.getElementById("saved-initials").innerHTML = previousUserData.initials
+    } else {
+        return;
+    }
+}
+
+saveBtn.addEventListener("click", function(e) {
+    e.preventDefault()
+    createSave()
+    renderMessage()
+})
+function init() {
+    createSave()
+}
+init()
+

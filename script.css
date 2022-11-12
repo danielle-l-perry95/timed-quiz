@@ -53,7 +53,7 @@ button:hover {
     display:none;
 }
 /* button styling for multiple choice answers */
-#btn-answer-one, .btn-wrong, #btn-answer-two, #btn-answer-three {
+#btn-answer-one, .btn-wrong, #btn-answer-two, #btn-answer-three, #btn-answer-four {
     border-color: white;
     border-radius: 10px;
     font-size: larger;
@@ -70,6 +70,16 @@ button:hover {
 }
 
 #question-container-three {
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    text-align: center;
+    display: list-item;
+    padding-bottom: 25px;
+    display:none;
+}
+
+#question-container-four {
     border-style: solid;
     border-color: white;
     border-radius: 10px;

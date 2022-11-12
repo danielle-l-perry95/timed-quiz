@@ -104,7 +104,7 @@ button:hover {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    display: none;
+    /* display: none; */
 }
 
 #initials {
@@ -114,5 +114,5 @@ button:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     height: 75px;
-    display: none;
+    /* display: none; */
 }

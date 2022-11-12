@@ -42,17 +42,19 @@ correctAnswerThreeBtn.addEventListener("click",function() {
     }
 })
 
-// displays Initials box and save button after 4th Q is clicked
-var saveBtn = document.getElementById("save")
-var initials = document.getElementById("initials") 
-var correctAnswerFourBtn = document.getElementById("btn-answer-four")
-correctAnswerFourBtn.addEventListener("click", function(){
-    if (saveBtn.style.display === "none"){
-        saveBtn.style.display = "block"
-    } else {
-        saveBtn.style.display = "none"
-    }
-})
+// displays Initials box and save button after 4th Q is clicked. This does not currently work. 
+// var saveBtn = document.getElementById("save")
+// var initials = document.getElementById("initials") 
+// var correctAnswerFourBtn = document.getElementById("btn-answer-four")
+// correctAnswerFourBtn.addEventListener("click", function(){
+//     if (saveBtn.style.display === "none" && initials.style.display === "none"){
+//         saveBtn.style.display = "block"
+//         initials.style.display = "block"
+//     } else {
+//         saveBtn.style.display = "none"
+//         initials.style.display = "none"
+//     }
+// })
 
 
 // set the timer to start on startbtn click. 

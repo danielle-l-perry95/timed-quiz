@@ -42,6 +42,18 @@ correctAnswerThreeBtn.addEventListener("click",function() {
     }
 })
 
+// displays Initials box and save button after 4th Q is clicked
+var saveBtn = document.getElementById("save")
+var initials = document.getElementById("initials") 
+var correctAnswerFourBtn = document.getElementById("btn-answer-four")
+correctAnswerFourBtn.addEventListener("click", function(){
+    if (saveBtn.style.display === "none"){
+        saveBtn.style.display = "block"
+    } else {
+        saveBtn.style.display = "none"
+    }
+})
+
 
 // set the timer to start on startbtn click. 
 document.getElementById("start-btn").addEventListener("click",function() {
@@ -67,6 +79,9 @@ var timeRemaining = 45
 function incorrect() {
     document.getElementById("score-number").innerHTML = results--
     document.getElementById("timer-seconds").innerHTML = timeRemaining-- + " seconds"
+    if (timeRemaining <= 0) {
+        timeRemaining = 0 
+    }
 }
 
 // Increase score when correct btn is clicked 

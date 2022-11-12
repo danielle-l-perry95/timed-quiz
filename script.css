@@ -53,7 +53,7 @@ button:hover {
     display:none;
 }
 /* button styling for multiple choice answers */
-#btn-answer-one, .btn-wrong, #btn-answer-two, #btn-answer-three, #btn-answer-four {
+#btn-answer-one, .btn-wrong, #btn-answer-two, #btn-answer-three, #btn-answer-four, #save {
     border-color: white;
     border-radius: 10px;
     font-size: larger;
@@ -96,4 +96,23 @@ button:hover {
     color: white;
     font-weight: bolder;
     padding-top: 20px;
+}
+
+#save {
+    position: relative;
+    left: 40%;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: none;
+}
+
+#initials {
+    position: relative;
+    left: 38%;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 75px;
+    display: none;
 }

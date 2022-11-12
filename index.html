@@ -20,25 +20,43 @@
     <div id="timer">Time Remaining: </div>
     <div id="timer-seconds">30 seconds</div>
 </section>
-<!-- question section -->
+<!-- question number -->
 <div id="question-container">
-    <div id="question-title">
+    <div>
         <h2>Question One:</h2>
     </div>
     <!-- Question -->
-    <div id="question-box">
+    <div>
         <h3 id="question">What does JSON stand for?</h3>
     </div>
     <!-- Multiple choice answers -->
-    <div class="answer-box">
-        <button id="btn-one" onclick="answerBtnOne()">
-            <p id="answer-one">Javascript operating numbers</p></button>
-        <button id="btn-two" onclick="answerBtnTwo()">
-            <p id="answer-two">Javascript object notation</p></button>
-        <button id="btn-three" onclick="answerBtnThree()">
-            <p id="answer-three">Javascript object numerator</p></button>
-        <button id="btn-four" onclick="answerBtnFour()">
-            <p id="answer-four">Javascript open navigation</p></button>
+    <div>
+        <button class="btn-wrong" onclick="answerBtnOne()">
+            <p>Javascript operating numbers</p></button>
+        <button id="btn-answer-one" onclick="answerBtnTwo()">
+            <p>Javascript object notation</p></button>
+        <button class="btn-wrong" onclick="answerBtnThree()">
+            <p>Javascript object numerator</p></button>
+        <button class="btn-wrong" onclick="answerBtnFour()">
+            <p>Javascript open navigation</p></button>
+    </div>
+</div>
+<div id="question-container-two">
+    <div>
+        <h2>Question Two:</h2>
+    </div>
+    <div>
+        <h3>What is a variable?</h3>
+    </div>
+    <div>
+        <button id="btn-answer-two" onclick="answerBtnOne()">
+            <p>containers for storing data</p></button>
+        <button class="btn-wrong" onclick="answerBtnTwo()">
+            <p>independent and dependent</p></button>
+        <button class="btn-wrong" onclick="answerBtnThree()">
+            <p>a function</p></button>
+        <button class="btn-wrong" onclick="answerBtnFour()">
+            <p>a for loop</p></button>
     </div>
 </div>
 

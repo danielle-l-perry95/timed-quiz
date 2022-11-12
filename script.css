@@ -53,10 +53,20 @@ button:hover {
     display:none;
 }
 /* button styling for multiple choice answers */
-#btn-one,#btn-two,#btn-three,#btn-four {
+#btn-answer-one, .btn-wrong, #btn-answer-two {
     border-color: white;
     border-radius: 10px;
     font-size: larger;
+}
+
+#question-container-two {
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    text-align: center;
+    display: list-item;
+    padding-bottom: 25px;
+    display:none;
 }
 
 #score {

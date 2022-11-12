@@ -9,6 +9,19 @@ startBtn.addEventListener("click",function() {
         questionContainer.style.display = "none"
     }
 })
+
+var correctAnswerOneBtn = document.getElementById("btn-answer-one")
+var questionContainerTwo = document.getElementById("question-container-two")
+correctAnswerOneBtn.addEventListener("click",function() {
+    if (questionContainerTwo.style.display === "none") {
+        questionContainerTwo.style.display = "block"
+    } else {
+        questionContainerTwo.style.display = "none"
+    }
+})
+
+
+
 // set the timer to start on startbtn click. How to fix stopping the alert and going back to main page when OK is clicked. 
 // document.getElementById("start-btn").addEventListener("click",function() {
 //     var timeRemaining = 30
@@ -20,6 +33,7 @@ startBtn.addEventListener("click",function() {
 //         }
 //     }, 1000)
 // },)
+// displays question two when correct answer is clicked
 
 // create objects for the questions 
 var questions = [

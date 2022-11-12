@@ -33,7 +33,7 @@ button:hover {
     left: 85%;
     font-size: larger;
     font-weight: bolder;
-    color: black;
+    color: white;
     padding-bottom: 15px;
 }
 
@@ -53,7 +53,7 @@ button:hover {
     display:none;
 }
 /* button styling for multiple choice answers */
-#btn-answer-one, .btn-wrong, #btn-answer-two {
+#btn-answer-one, .btn-wrong, #btn-answer-two, #btn-answer-three {
     border-color: white;
     border-radius: 10px;
     font-size: larger;
@@ -69,7 +69,17 @@ button:hover {
     display:none;
 }
 
-#score {
+#question-container-three {
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    text-align: center;
+    display: list-item;
+    padding-bottom: 25px;
+    display:none;
+}
+
+#score, #score-number {
     text-align: center;
     font-size: 200%;
     font-family: Arial, Helvetica, sans-serif;

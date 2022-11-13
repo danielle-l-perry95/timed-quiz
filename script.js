@@ -92,12 +92,12 @@ function correct() {
 var scoreNumber = document.getElementById("score-number")
 var initials =  document.getElementById("initials")
 var saveBtn = document.getElementById("save")
-var savedScore = document.getElementById("saved-score")
+// var savedScore = document.getElementById("saved-score")
 var savedInitials = document.getElementById("saved-initials")
-
+var result = document.getElementById("result")
 function createSave() {
  var userData = {
-    score: score.value,
+    score: scoreNumber.value,
     initials: initials.value
 };
 localStorage.setItem("userData",JSON.stringify(userData))
@@ -106,7 +106,7 @@ renderMessage();
 function renderMessage() {
     var previousUserData = JSON.parse(localStorage.getItem("userData"));
     if (previousUserData !== null) {
-        document.getElementById("saved-score").innerHTML = previousUserData.score
+        document.getElementById("result").innerHTML = previousUserData.score
         document.getElementById("saved-initials").innerHTML = previousUserData.initials
     } else {
         return;

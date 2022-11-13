@@ -67,22 +67,24 @@ document.getElementById("start-btn").addEventListener("click",function() {
             alert(`Quiz Failed! You ran out of time.`)
         }
     }, 1000)
-    // This does not currently work. Need to figure out how to decrement time on click event 
     // wrongBtn.addEventListener("click",function() {
-    //     timeRemaining -= 5
-    //     document.getElementById("timer-seconds").innerHTML = timeRemaining-- + " seconds"
+    //     timeRemaining = timeRemaining - 5
+    //     document.getElementById("timer-seconds").innerHTML = timeRemaining + " seconds"
     // })
 },)
+// How to stop timer when last question is answered. 
 
-// Decrease score when the wrong btn is clicked. How to decrement timer more than one second. 
+
+// Decrease score when the wrong btn is clicked. Decreases timer when wrong btn is clicked. 
 var scoreNumber = document.getElementById("score-number")
 var results = 100
 var timeRemaining = 45
 function incorrect() {
     document.getElementById("score-number").innerHTML = results--
-    document.getElementById("timer-seconds").innerHTML = timeRemaining-- + " seconds"
+    timeRemaining = timeRemaining - 5
+    document.getElementById("timer-seconds").innerHTML = timeRemaining + " seconds"
     if (timeRemaining <= 0) {
-        timeRemaining = 0 
+        clearInterval(timeRemaining)
     }
 }
 
@@ -90,6 +92,7 @@ function incorrect() {
 function correct() {
     document.getElementById("score-number").innerHTML = results ++
 }
+
 // Saving the initials and score.This also does not work. 
 var scoreNumber = document.getElementById("score-number")
 var initials =  document.getElementById("initials")

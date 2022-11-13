@@ -57,6 +57,8 @@ correctAnswerThreeBtn.addEventListener("click",function() {
 // })
 
 
+
+
 // set the timer to start on startbtn click. 
 document.getElementById("start-btn").addEventListener("click",function() {
     var timeRemaining = 45

@@ -41,7 +41,10 @@ correctAnswerThreeBtn.addEventListener("click",function() {
         questionContainerFour.style.display = "none"
     }
 })
-
+// Displays footer container after 4th question is answered correctly
+var lastBtn = $('#btn-answer-four').on('click',function(){
+    $('.footer').show()
+})
 // displays Initials box and save button after 4th Q is clicked. This does not currently work. 
 // var saveBtn = document.getElementById("save")
 // var initials = document.getElementById("initials") 
@@ -55,7 +58,6 @@ correctAnswerThreeBtn.addEventListener("click",function() {
 //         initials.style.display = "none"
 //     }
 // })
-
 
 
 

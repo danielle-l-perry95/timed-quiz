@@ -89,6 +89,10 @@ button:hover {
     display:none;
 }
 
+.footer {
+    display: none;
+}
+
 #score, #score-number {
     text-align: center;
     font-size: 200%;

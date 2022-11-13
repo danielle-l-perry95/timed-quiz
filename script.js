@@ -3,6 +3,7 @@
 var startBtn = document.querySelector("#start-btn")
 var questionContainer = document.querySelector("#question-container")
 var wrongBtn = document.querySelector(".btn-wrong")
+
 // Shows question one after clicking start btn 
 startBtn.addEventListener("click",function() {
     if (questionContainer.style.display === "none") {
@@ -11,7 +12,7 @@ startBtn.addEventListener("click",function() {
         questionContainer.style.display = "none"
     }
 })
-// shows question two afte clicking the correct answer 
+// shows question two after clicking the correct answer 
 var correctAnswerOneBtn = document.getElementById("btn-answer-one")
 var questionContainerTwo = document.getElementById("question-container-two")
 correctAnswerOneBtn.addEventListener("click",function() {
@@ -45,23 +46,9 @@ correctAnswerThreeBtn.addEventListener("click",function() {
 var lastBtn = $('#btn-answer-four').on('click',function(){
     $('.footer').show()
 })
-// displays Initials box and save button after 4th Q is clicked. This does not currently work. 
-// var saveBtn = document.getElementById("save")
-// var initials = document.getElementById("initials") 
-// var correctAnswerFourBtn = document.getElementById("btn-answer-four")
-// correctAnswerFourBtn.addEventListener("click", function(){
-//     if (saveBtn.style.display === "none" && initials.style.display === "none"){
-//         saveBtn.style.display = "block"
-//         initials.style.display = "block"
-//     } else {
-//         saveBtn.style.display = "none"
-//         initials.style.display = "none"
-//     }
-// })
-
-
 
 // set the timer to start on startbtn click. 
+var timerSeconds = document.getElementById("timer-seconds")
 document.getElementById("start-btn").addEventListener("click",function() {
     var timeRemaining = 45
     setInterval(function(){
@@ -70,14 +57,16 @@ document.getElementById("start-btn").addEventListener("click",function() {
             clearInterval(timeRemaining)
             alert(`Quiz Failed! You ran out of time.`)
         }
+        // Timer stops once the 4th question has been answered 
+        document.getElementById("btn-answer-four").addEventListener("click",function(){
+            clearInterval(timeRemaining)
+            timeRemaining = setInterval(function(){
+                timeRemaining = 45
+                timerSeconds.innerHTML = timeRemaining
+            })
+        })
     }, 1000)
-    // wrongBtn.addEventListener("click",function() {
-    //     timeRemaining = timeRemaining - 5
-    //     document.getElementById("timer-seconds").innerHTML = timeRemaining + " seconds"
-    // })
 },)
-// How to stop timer when last question is answered. 
-
 
 // Decrease score when the wrong btn is clicked. Decreases timer when wrong btn is clicked. 
 var scoreNumber = document.getElementById("score-number")
@@ -87,15 +76,17 @@ function incorrect() {
     document.getElementById("score-number").innerHTML = results--
     timeRemaining = timeRemaining - 5
     document.getElementById("timer-seconds").innerHTML = timeRemaining + " seconds"
-    if (timeRemaining <= 0) {
-        clearInterval(timeRemaining)
-    }
+    preventDefault(timeRemaining)
+    // if (timeRemaining <= 0) {
+    //     clearInterval(timeRemaining)
+    // }
 }
 
 // Increase score when correct btn is clicked 
 function correct() {
     document.getElementById("score-number").innerHTML = results ++
 }
+
 
 // Saving the initials and score.This also does not work. 
 var scoreNumber = document.getElementById("score-number")

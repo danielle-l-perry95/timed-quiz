@@ -47,10 +47,14 @@ var lastBtn = $('#btn-answer-four').on('click',function(){
     $('.footer').show()
 })
 
+
+
+var timeRemaining = 45
+
 // set the timer to start on startbtn click. 
 var timerSeconds = document.getElementById("timer-seconds")
 document.getElementById("start-btn").addEventListener("click",function() {
-    var timeRemaining = 45
+    timeRemaining = 45
     setInterval(function(){
         document.getElementById("timer-seconds").innerHTML = timeRemaining-- + " seconds"
         if (timeRemaining <= 0) {
@@ -71,35 +75,32 @@ document.getElementById("start-btn").addEventListener("click",function() {
 // Decrease score when the wrong btn is clicked. Decreases timer when wrong btn is clicked. 
 var scoreNumber = document.getElementById("score-number")
 var results = 100
-var timeRemaining = 45
+
 function incorrect() {
     document.getElementById("score-number").innerHTML = results--
     timeRemaining = timeRemaining - 5
     document.getElementById("timer-seconds").innerHTML = timeRemaining + " seconds"
-    preventDefault(timeRemaining)
-    // if (timeRemaining <= 0) {
-    //     clearInterval(timeRemaining)
-    // }
 }
 
 // Increase score when correct btn is clicked 
 function correct() {
-    document.getElementById("score-number").innerHTML = results ++
+    document.getElementById("score-number").innerHTML = results
 }
 
 
-// Saving the initials and score.This also does not work. 
+// Saving the initials and score.
 var scoreNumber = document.getElementById("score-number")
 var initials =  document.getElementById("initials")
 var saveBtn = document.getElementById("save")
-// var savedScore = document.getElementById("saved-score")
 var savedInitials = document.getElementById("saved-initials")
 var result = document.getElementById("result")
+console.log(initials.value, scoreNumber.value)
 function createSave() {
  var userData = {
-    score: scoreNumber.value,
+    score: results,
     initials: initials.value
 };
+
 localStorage.setItem("userData",JSON.stringify(userData))
 renderMessage();
 };
@@ -122,4 +123,5 @@ function init() {
     createSave()
 }
 init()
+
 

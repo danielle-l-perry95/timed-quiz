@@ -12,7 +12,7 @@ For this project, I was required to create a timed quiz. Once the user clicks on
 
 #### Links and Screenshot 
 https://github.com/danille-l-perry95/timed-quiz
-https://danielle-l-perry95.githubio/timed-quiz
+https://danielle-l-perry95.github.io/timed-quiz/
 
 ![Screenshot-1](./images/TimedQuizPicOne.png)
 ![Screenshot-2](./images/TimedQuizPicTwo.png)
